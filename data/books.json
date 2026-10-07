@@ -1,0 +1,24 @@
+[
+  {
+    "id": "001",
+    "title": "Giáo trình Kinh tế vi mô",
+    "author": "Nguyễn Văn A",
+    "subject": "Kinh tế",
+    "year": 2024,
+    "type": "giáo trình",
+    "tags": ["vi mô", "đại cương"],
+    "file": "files/kinh-te-vi-mo.pdf",
+    "cover": "files/covers/001.jpg"
+  },
+  {
+    "id": "002",
+    "title": "Toán Cao cấp – Lý thuyết hàm số",
+    "author": "Trần Thị B",
+    "subject": "Toán",
+    "year": 2023,
+    "type": "giáo trình",
+    "tags": ["hàm số", "đại số"] ,
+    "file": "files/toan-cao-cap.pdf",
+    "cover": "files/covers/002.jpg"
+  }
+]

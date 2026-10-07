@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thư viện số – Tài liệu học tập</title>
+  <meta name="description" content="Thư viện số tài liệu học tập miễn phí, tìm kiếm nhanh, xem PDF ngay trên trình duyệt." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  <link rel="apple-touch-icon" href="assets/logo.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./">
+      <img src="assets/logo.jpg" alt="Logo" class="brand-img" />
+      <span>Thư viện số</span>
+    </a>
+    <div class="topbar-right">
+      <button id="themeToggle" class="icon-btn" aria-label="Chuyển chế độ sáng/tối">🌙</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <button class="btn-primary" id="btnContribute">＋ Đóng góp</button>
+      <nav>
+        <a href="#" class="nav-link active" data-view="home"><span>🏠</span> Trang chủ</a>
+        <a href="#" class="nav-link" data-view="library"><span>📚</span> Thư viện</a>
+        <a href="#" class="nav-link" data-view="recent"><span>🕘</span> Gần đây</a>
+        <p class="nav-title">Công cụ</p>
+        <a href="#" class="nav-link" data-view="summary"><span>📝</span> Bản tóm tắt</a>
+        <a href="#" class="nav-link" data-view="errors"><span>🔍</span> Tìm lỗi sai</a>
+        <a href="#" class="nav-link" data-view="dup"><span>🧬</span> Quét trùng lặp</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <div class="searchbar">
+        <input type="text" id="searchInput" placeholder="Tìm kiếm tài liệu, tác giả hoặc chủ đề..." />
+        <span class="search-ico">🔎</span>
+      </div>
+
+      <section id="recentSection" class="section hidden">
+        <h2>Tiếp tục từ chỗ bạn đã dừng lại</h2>
+        <div id="recentList" class="card-row"></div>
+      </section>
+
+      <section class="section">
+        <h2 id="mainTitle">Tất cả tài liệu</h2>
+        <div class="chips" id="chips">
+          <select id="filterSubject"><option value="">Tất cả môn</option></select>
+          <select id="filterYear"><option value="">Mọi năm</option></select>
+          <select id="filterType"><option value="">Mọi loại</option></select>
+        </div>
+        <div id="bookList" class="card-row wrap"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="pdfModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" id="pdfClose">&times;</span>
+      <canvas id="pdfCanvas"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
