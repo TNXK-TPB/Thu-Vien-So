@@ -39,7 +39,6 @@ function cardHTML(b) {
         <span class="badge">${esc(b.year)}</span>
       </div>
       <h3>${esc(b.title)}</h3>
-      <p class="author">👤 ${esc(b.author)}</p>
       <span class="tag">${esc(b.subject)}</span>
     </article>`;
 }
