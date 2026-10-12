@@ -1,0 +1,47 @@
+[
+  {
+    "id": "lich-su-chinh-tri", "name": "Lịch sử & Chính trị",
+    "children": [
+      { "id": "lich-su-viet-nam", "name": "Lịch sử Việt Nam" },
+      { "id": "lich-su-the-gioi", "name": "Lịch sử thế giới" },
+      { "id": "dang-cong-san", "name": "Đảng Cộng sản Việt Nam",
+        "children": [
+          { "id": "tu-tuong-ho-chi-minh", "name": "Tư tưởng Hồ Chí Minh" }
+        ] },
+      { "id": "phap-luat", "name": "Pháp luật" }
+    ]
+  },
+  {
+    "id": "khoa-hoc-cong-nghe", "name": "Khoa học & Công nghệ",
+    "children": [
+      { "id": "khoa-hoc", "name": "Khoa học" },
+      { "id": "cong-nghe-so", "name": "Công nghệ số" },
+      { "id": "tri-tue-nhan-tao", "name": "Trí tuệ nhân tạo (AI)" }
+    ]
+  },
+  {
+    "id": "kinh-te-xa-hoi", "name": "Kinh tế & Xã hội",
+    "children": [
+      { "id": "kinh-te", "name": "Kinh tế" },
+      { "id": "doan-hoi-doi", "name": "Đoàn – Hội – Đội",
+        "children": [
+          { "id": "doan-thanh-nien", "name": "Đoàn Thanh niên" },
+          { "id": "doi-thieu-nien", "name": "Đội Thiếu niên" }
+        ] }
+    ]
+  },
+  {
+    "id": "van-hoc-thieu-nhi", "name": "Văn học",
+    "children": [
+      { "id": "van-hoc-viet-nam", "name": "Văn học Việt Nam" }
+    ]
+  },
+  {
+    "id": "muc-khac", "name": "Mục khác",
+    "children": [
+      { "id": "dia-ly-van-hoa", "name": "Địa lý – Văn hóa – Dân tộc Việt Nam" },
+      { "id": "y-te-suc-khoe", "name": "Y tế – Sức khỏe" },
+      { "id": "ngoai-ngu", "name": "Ngoại ngữ" }
+    ]
+  }
+]

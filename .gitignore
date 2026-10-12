@@ -3,3 +3,11 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Temp/build scripts
+*.py
+*.bak
+test.pdf
+list.txt
+list2.txt
+full_list.txt

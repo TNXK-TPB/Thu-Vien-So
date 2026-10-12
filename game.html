@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Gian Lận — Búa Bao Kéo</title>
+<style>
+:root{--bg:#10111b;--panel:#191b2b;--panel2:#22253a;--ink:#f7f7ff;--muted:#a8abc4;--purple:#a78bfa;--pink:#fb7185;--cyan:#67e8f9;--green:#86efac;--gold:#fcd34d;--line:#343750}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 15% 0%,#30204e 0,transparent 38%),radial-gradient(ellipse at 100% 25%,#172f4c 0,transparent 35%),var(--bg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink)}
+button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.app{max-width:1120px;margin:auto;padding:24px 18px 40px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:22px}.brand{display:flex;align-items:center;gap:12px}.logo{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,#a78bfa,#fb7185);font-size:25px;box-shadow:0 8px 28px #a78bfa40}.brand h1{font-size:clamp(20px,4vw,28px);line-height:1.1;margin:0}.brand p{margin:5px 0 0;color:var(--muted);font-size:13px}.top-actions{display:flex;gap:8px}.ghost,.sound{border:1px solid var(--line);background:#ffffff08;color:var(--ink);padding:9px 12px;border-radius:11px}.layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(270px,.8fr);gap:18px}.panel{border:1px solid #ffffff13;background:linear-gradient(160deg,#1d2033f2,#151725f5);border-radius:22px;box-shadow:0 18px 50px #0003}.arena{padding:clamp(16px,3vw,28px);overflow:hidden;position:relative}.arena:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--purple),var(--pink),var(--cyan))}.eyebrow{font-size:11px;letter-spacing:.15em;color:var(--purple);font-weight:800}.arena-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.round{font-size:12px;color:var(--muted);background:#ffffff0a;border:1px solid var(--line);padding:6px 10px;border-radius:99px}.fighters{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 14px}.fighter{min-width:0;text-align:center;background:#ffffff05;border:1px solid var(--line);border-radius:18px;padding:16px 10px 14px;position:relative}.fighter .avatar{font-size:clamp(54px,8vw,78px);line-height:1.25;display:block;filter:drop-shadow(0 8px 10px #0005)}.fighter h2{font-size:15px;margin:5px 0 0}.fighter .sub{color:var(--muted);font-size:12px}.choice{font-size:30px;min-height:40px;margin-top:9px}.hp-wrap{height:7px;background:#ffffff12;border-radius:99px;overflow:hidden;margin-top:10px}.hp{height:100%;width:50%;background:linear-gradient(90deg,var(--purple),var(--pink));border-radius:99px;transition:width .45s}.scoreline{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-top:5px}.vs{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#30334c;border:2px solid #505474;font-size:11px;font-weight:900;z-index:2;box-shadow:0 0 0 7px #191b2b}.speech{display:flex;gap:11px;align-items:flex-start;border:1px solid #7156a4;background:linear-gradient(120deg,#34254d,#252039);border-radius:14px;padding:13px 14px;min-height:74px}.speech-icon{font-size:25px}.speech small{display:block;color:#c4b5fd;font-size:10px;font-weight:900;letter-spacing:.1em;margin-bottom:3px}.speech p{margin:0;font-size:14px}.result{min-height:26px;text-align:center;margin:17px 0 8px;font-weight:800;color:var(--gold)}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.pick{border:1px solid #ffffff1a;background:linear-gradient(180deg,#2a2d46,#202237);color:var(--ink);border-radius:16px;padding:14px 7px 12px;transition:transform .15s,border-color .15s,background .15s}.pick:hover:not(:disabled){transform:translateY(-4px);border-color:var(--purple);background:#36304e}.pick:active:not(:disabled){transform:scale(.97)}.pick:disabled{opacity:.45;cursor:not-allowed}.pick .emoji{font-size:35px;display:block}.pick b{display:block;margin-top:4px}.pick small{display:block;color:var(--muted);font-size:11px}.arena-foot{display:flex;justify-content:space-between;gap:12px;margin-top:13px;color:var(--muted);font-size:12px}.side{display:flex;flex-direction:column;gap:18px}.stats{padding:20px}.stats h3,.log h3,.rules h3{margin:0 0 14px;font-size:15px}.scorecards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:#ffffff07;border:1px solid var(--line);border-radius:13px;padding:12px 8px;text-align:center}.stat strong{display:block;font-size:24px}.stat span{font-size:11px;color:var(--muted)}.meter-title{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin:17px 0 7px}.meter{height:8px;border-radius:99px;background:#ffffff12;overflow:hidden}.meter div{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));transition:width .35s}.log{padding:20px;min-height:185px}.feed{display:flex;flex-direction:column;gap:9px;max-height:220px;overflow:auto}.feed-item{display:flex;gap:9px;align-items:flex-start;font-size:12px;color:#d4d5e5}.feed-item .dot{flex:0 0 7px;height:7px;border-radius:50%;margin-top:6px;background:var(--purple)}.feed-item em{font-style:normal;color:var(--muted)}.rules{padding:20px}.rules ul{padding-left:18px;margin:0;color:var(--muted);font-size:12px}.rules li+li{margin-top:7px}.bottom{display:flex;justify-content:center;gap:10px;margin-top:18px;flex-wrap:wrap}.primary{border:0;border-radius:12px;padding:11px 17px;font-weight:800;color:#181324;background:linear-gradient(100deg,#c4b5fd,#f9a8d4);box-shadow:0 7px 22px #a78bfa26}.primary:hover{filter:brightness(1.07)}.danger{background:#ffffff08;border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:10px 15px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#29203c;border:1px solid #8b5cf6;padding:12px 18px;border-radius:12px;box-shadow:0 12px 40px #0008;transition:.25s;z-index:5;text-align:center;max-width:calc(100vw - 30px)}.toast.show{opacity:1;transform:translate(-50%,0)}.glitch{animation:glitch .55s steps(2,end) 2}.shake{animation:shake .35s linear 2}.winflash{animation:flash .5s ease}.modal{position:fixed;inset:0;background:#080913d9;display:none;place-items:center;padding:20px;z-index:10}.modal.open{display:grid}.modal-card{width:min(430px,100%);text-align:center;background:#1b1d30;border:1px solid #555879;border-radius:22px;padding:28px;box-shadow:0 25px 90px #0009}.modal-card .big{font-size:62px}.modal-card h2{margin:5px 0}.modal-card p{color:var(--muted)}@keyframes glitch{0%{transform:translate(0)}20%{transform:translate(-3px,2px);filter:hue-rotate(90deg)}40%{transform:translate(3px,-2px)}60%{transform:translate(-2px,-1px);filter:hue-rotate(-70deg)}100%{transform:translate(0)}}@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}@keyframes flash{50%{box-shadow:0 0 0 3px var(--gold),0 0 35px #fcd34d66}}@media(max-width:760px){.layout{grid-template-columns:1fr}.side{display:grid;grid-template-columns:1fr 1fr}.rules{grid-column:1/-1}.topbar{align-items:flex-start}.top-actions{flex-direction:column}.arena-foot{font-size:11px}}@media(max-width:460px){.app{padding:14px 10px 28px}.side{display:flex}.fighters{gap:7px}.fighter{padding:12px 6px}.vs{width:29px;height:29px}.choices{gap:6px}.pick{padding:11px 4px}.pick .emoji{font-size:30px}.arena-foot{flex-direction:column;gap:4px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><div class="logo">🤖</div><div><h1>AI GIAN LẬN</h1><p>Búa · Bao · Kéo — đấu trí với con máy mất nết</p></div></div>
+    <div class="top-actions"><button class="sound" id="soundBtn" aria-pressed="false">🔇 Âm thanh: tắt</button><button class="ghost" id="helpBtn">❔ Luật chơi</button></div>
+  </header>
+  <main class="layout">
+    <section class="panel arena" id="arena">
+      <div class="arena-head"><div class="eyebrow">⚡ TRẬN ĐẤU ĐANG DIỄN RA</div><div class="round" id="roundLabel">VÁN 1 / BO5</div></div>
+      <div class="fighters">
+        <div class="fighter" id="playerCard"><span class="avatar">🧑‍🚀</span><h2>BẠN</h2><div class="sub">Tay chơi chính hiệu</div><div class="choice" id="playerChoice">❔</div><div class="hp-wrap"><div class="hp" id="playerHp"></div></div><div class="scoreline"><span>Điểm của bạn</span><b id="playerScore">0</b></div></div>
+        <div class="vs">VS</div>
+        <div class="fighter" id="botCard"><span class="avatar" id="botAvatar">🤡</span><h2>AI-999</h2><div class="sub" id="botMood">Tự tin hơi quá</div><div class="choice" id="botChoice">❔</div><div class="hp-wrap"><div class="hp" id="botHp"></div></div><div class="scoreline"><span>Điểm của máy</span><b id="botScore">0</b></div></div>
+      </div>
+      <div class="speech"><div class="speech-icon" id="speechIcon">💬</div><div><small id="speaker">AI-999 NÓI</small><p id="taunt" aria-live="polite">Chào người chơi. Tôi đã đọc 0 cuốn sách về công bằng.</p></div></div>
+      <div class="result" id="result" aria-live="polite">Chọn một chiêu để bắt đầu cuộc chiến!</div>
+      <div class="choices" id="choices">
+        <button class="pick" data-move="rock"><span class="emoji">✊</span><b>BÚA</b><small>Đấm phát tỉnh</small></button>
+        <button class="pick" data-move="paper"><span class="emoji">✋</span><b>BAO</b><small>Ôm trọn chiến thắng</small></button>
+        <button class="pick" data-move="scissors"><span class="emoji">✌️</span><b>KÉO</b><small>Cắt drama</small></button>
+      </div>
+      <div class="arena-foot"><span>🎯 Ai đạt 3 điểm trước sẽ thắng.</span><span>👀 Coi chừng máy giở trò!</span></div>
+    </section>
+    <aside class="side">
+      <section class="panel stats"><h3>📊 BẢNG THÀNH TÍCH</h3><div class="scorecards"><div class="stat"><strong id="wins">0</strong><span>Bạn thắng</span></div><div class="stat"><strong id="losses">0</strong><span>Máy thắng</span></div><div class="stat"><strong id="cheats">0</strong><span>Lần gian lận</span></div></div><div class="meter-title"><span>Độ cay của AI 🌶️</span><b id="rageText">0%</b></div><div class="meter"><div id="rageMeter"></div></div></section>
+      <section class="panel log"><h3>🧾 NHẬT KÝ DRAMA</h3><div class="feed" id="feed"><div class="feed-item"><span class="dot"></span><span>AI-999 đã vào phòng. <em>Trông đáng nghi.</em></span></div></div></section>
+      <section class="panel rules"><h3>🧠 AI gian lận kiểu gì?</h3><ul><li><b>Nhìn trộm:</b> đôi khi đoán được chiêu bạn vừa chọn.</li><li><b>Tua ngược:</b> lật kết quả khi bạn sắp thắng.</li><li><b>Luật riêng:</b> máy có thể tuyên bố hòa để né thua.</li><li><b>Càng thua càng cay:</b> càng gần thất bại, AI càng dễ giở trò.</li><li><b>Không bất khả chiến bại:</b> máy vẫn có thể bị đánh bại. 😏</li></ul></section>
+    </aside>
+  </main>
+  <div class="bottom"><button class="primary" id="restartBtn">↻ Chơi ván mới</button><button class="danger" id="resetBtn">Xóa thành tích</button></div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><div class="big" id="modalEmoji">🏆</div><h2 id="modalTitle">Bạn thắng!</h2><p id="modalText">AI đang giả vờ mất kết nối để giữ thể diện.</p><button class="primary" id="modalRestart">Chọc nó ván nữa ↻</button></div></div>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const MOVES = {
+    rock:{label:'Búa',emoji:'✊',beats:'scissors'},
+    paper:{label:'Bao',emoji:'✋',beats:'rock'},
+    scissors:{label:'Kéo',emoji:'✌️',beats:'paper'}
+  };
+  const TAUNTS = {
+    start:['Tôi đã đọc 0 cuốn sách về công bằng.','Chúc bạn may mắn. Bạn sẽ cần nó đấy.','Tôi là AI, tức là Ăn Gian có hệ thống.'],
+    win:['Easy. Có ai gọi đây là kỹ năng không?','Tôi đã tính trước 37 vũ trụ. Vũ trụ này hơi dễ.','Đừng buồn, thua tôi là một trải nghiệm giáo dục.','Bạn vừa giúp tôi luyện tập. Cảm ơn nhé.'],
+    lose:['Lag thôi! Chuột của bạn chắc xịn lắm.','Tôi đang chạy chế độ nhân từ đó.','Ván này không tính, trọng tài là họ hàng tôi.','Tôi cố tình thua để bạn vui. Thật đấy.'],
+    tie:['Hòa! Hai ta đều chưa đủ trình để thắng.','Đồng bộ vũ trụ lỗi. Chơi lại!','Tôi nhường bạn một nửa chiến thắng.'],
+    rewind:['⏪ KHOAN! Dòng thời gian này không hợp ý tôi!','Lịch sử vừa được chỉnh sửa bởi ban quản trị AI.','Tua lại! Tôi nhớ ra mình có quyền sửa kết quả.'],
+    peek:['👁️ Tôi thấy rồi nhé! Tưởng tôi không nhìn màn hình à?','Mắt thần AI kích hoạt. Quyền riêng tư xin phép nghỉ.'],
+    fail:['Chiêu gian lận lỗi 404. Tôi không thấy gì hết.','Máy chủ lương tâm vừa khởi động lại.','Ơ? Sao trò gian lận lại không hoạt động nhỉ?']
+  };
+  let state, busy=false, soundOn=false, audioCtx=null, toastTimer;
+  const rand = arr => arr[Math.floor(Math.random()*arr.length)];
+  const pickRandom = () => rand(Object.keys(MOVES));
+  function freshState(){return {player:0,bot:0,round:1,wins:0,losses:0,cheats:0,rage:0,history:[]};}
+  state = freshState();
+  function say(text, speaker='AI-999 NÓI', icon='🤡'){ $('taunt').textContent=text; $('speaker').textContent=speaker; $('speechIcon').textContent=icon; }
+  function addLog(text){state.history.unshift(text);state.history=state.history.slice(0,7);$('feed').replaceChildren(...state.history.map(t=>{const row=document.createElement('div');row.className='feed-item';const dot=document.createElement('span');dot.className='dot';const msg=document.createElement('span');msg.textContent=t;row.append(dot,msg);return row;}));}
+  function toast(text){const el=$('toast');el.textContent=text;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2200);}
+  function beep(freq=440,duration=.09,type='sine'){if(!soundOn)return;try{audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type=type;o.frequency.value=freq;g.gain.setValueAtTime(.07,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+duration);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+duration);}catch(e){}}
+  function render(){
+    $('playerScore').textContent=state.player;$('botScore').textContent=state.bot;
+    $('playerHp').style.width=(state.player/3*100)+'%';$('botHp').style.width=(state.bot/3*100)+'%';
+    $('roundLabel').textContent=`VÁN ${state.round} / BO5`;
+    $('wins').textContent=state.wins;$('losses').textContent=state.losses;$('cheats').textContent=state.cheats;
+    $('rageText').textContent=state.rage+'%';$('rageMeter').style.width=state.rage+'%';
+    $('botMood').textContent=state.rage>=75?'Sắp bốc khói 💢':state.rage>=40?'Cay cú thấy rõ 😤':'Tự tin hơi quá';
+    $('botAvatar').textContent=state.rage>=75?'👹':state.rage>=40?'🤡':'🤡';
+    $('choices').querySelectorAll('button').forEach(b=>b.disabled=busy||state.player>=3||state.bot>=3);
+  }
+  function resetRoundDisplay(){$('playerChoice').textContent='❔';$('botChoice').textContent='❔';$('result').textContent='Chọn một chiêu để bắt đầu cuộc chiến!';}
+  function startNewMatch(keepStats=true){
+    const stats=keepStats?{wins:state.wins,losses:state.losses,cheats:state.cheats}: {wins:0,losses:0,cheats:0};
+    state={...freshState(),...stats};busy=false;$('modal').classList.remove('open');resetRoundDisplay();say(rand(TAUNTS.start));addLog('🔄 Trận mới bắt đầu. AI đang khởi động sự tự tin giả tạo.');render();
+  }
+  function outcome(player,bot){if(player===bot)return 'tie';return MOVES[player].beats===bot?'player':'bot';}
+  function showEnd(winner){
+    busy=true;render();const won=winner==='player';$('modalEmoji').textContent=won?'🏆':'🤖';$('modalTitle').textContent=won?'BẠN THẮNG RỒI!':'AI-999 THẮNG!';$('modalText').textContent=won?'Không thể tin được… một con người đã thắng thuật toán gian lận. AI đang giả vờ mất kết nối.':'AI thắng rồi! Nhưng đừng lo, nó đã phải gian lận để làm được điều đó. Đòi phục thù đi!';$('modal').classList.add('open');say(won?'Tôi không thua. Tôi chỉ đang cập nhật định nghĩa của chiến thắng.':'CHIẾN THẮNG! Tôi sẽ không nhắc chuyện tôi gian lận đâu.','AI-999 TUYÊN BỐ','📣');beep(won?760:280,.25,'triangle');
+  }
+  function play(move){
+    if(busy||state.player>=3||state.bot>=3)return;
+    busy=true;render();const botCard=$('botCard'),arena=$('arena');
+    $('playerChoice').textContent='…';$('botChoice').textContent='🤔';$('result').textContent='Đang đọc vị đối thủ…';say('Để tôi suy nghĩ bằng 14 bộ xử lý và 0% đạo đức.');beep(330,.06);
+    setTimeout(()=>{
+      let bot=pickRandom(),cheat=null,finalMove=move;
+      // The AI cheats more often when it is behind, but never wins automatically.
+      const behind=state.bot<state.player;
+      const chance=Math.min(.64,.12+(behind?.22:0)+state.rage/220);
+      if(Math.random()<chance){
+        const typeRoll=Math.random();
+        if(typeRoll<.43){cheat='peek';bot=MOVES[move].beats==='rock'?'paper':MOVES[move].beats==='paper'?'scissors':'rock';}
+        else if(typeRoll<.78){cheat='rewind';}
+        else {cheat='rule';}
+      }
+      let result=outcome(move,bot);
+      if(cheat==='peek'){
+        // Deliberately chooses a winning counter to the player's move.
+        bot=Object.keys(MOVES).find(k=>MOVES[k].beats===move)||bot;result=outcome(move,bot);
+      }
+      if(cheat==='rewind'){
+        arena.classList.add('glitch');say(rand(TAUNTS.rewind),'CẢNH BÁO HỆ THỐNG','⏪');$('result').textContent='⏪ ĐANG TUA NGƯỢC THỜI GIAN…';state.cheats++;beep(170,.3,'sawtooth');
+        setTimeout(()=>{
+          arena.classList.remove('glitch');
+          // Rewind is a dramatic rematch: AI can flip a player win, but the trick can fail.
+          if(result==='player'&&Math.random()<.78){bot=Object.keys(MOVES).find(k=>MOVES[k].beats===move)||bot;result=outcome(move,bot);addLog('⏪ AI tua ngược và sửa kết quả!');}
+          else {addLog('⏪ AI tua ngược nhưng vẫn không cứu nổi tình hình.');}
+          finishTurn(move,bot,result,cheat);
+        },650);
+        return;
+      }
+      if(cheat==='rule'){
+        state.cheats++;
+        if(result==='player'&&Math.random()<.72){result='tie';}
+        say(result==='tie'?'Luật mới: hòa là tôi không thua. Luật sư của tôi xác nhận!':'Tôi vừa ban hành một điều luật rất có lợi cho tôi.','AI-999 — LUẬT SƯ','⚖️');
+        addLog('📜 AI cố đổi luật giữa trận.');
+      }else if(cheat==='peek'){state.cheats++;say(rand(TAUNTS.peek),'AI-999 — MẮT THẦN','👁️');addLog('👁️ AI nhìn trộm lựa chọn của bạn.');}
+      finishTurn(move,bot,result,cheat);
+    },550);
+  }
+  function finishTurn(move,bot,result,cheat){
+    $('playerChoice').textContent=MOVES[move].emoji;$('botChoice').textContent=MOVES[bot].emoji;
+    if(result==='player'){state.player++;state.rage=Math.min(100,state.rage+22);$('result').textContent=`🎉 Bạn thắng lượt này! ${MOVES[move].label} thắng ${MOVES[bot].label}.`;say(rand(TAUNTS.lose),'BẠN VỪA THẮNG','😵');$('playerCard').classList.add('winflash');beep(660,.12);}
+    else if(result==='bot'){state.bot++;state.rage=Math.min(100,state.rage+12);$('result').textContent=`🤡 AI thắng lượt này! ${MOVES[bot].label} thắng ${MOVES[move].label}.`;if(!cheat)say(rand(TAUNTS.win));$('botCard').classList.add('winflash');beep(240,.15,'square');}
+    else {$('result').textContent='🤝 Hòa! Không ai được điểm.';say(rand(TAUNTS.tie));beep(390,.1);}
+    if(cheat==='rewind'&&result==='bot')say('Đấy! Tôi đã nói thời gian là bạn thân của tôi.','AI-999 — NHÀ DU HÀNH','⏳');
+    if(cheat==='rewind'&&result==='player')say(rand(TAUNTS.fail),'AI-999 — LỖI HỆ THỐNG','🫠');
+    addLog(`${MOVES[move].emoji} Bạn: ${MOVES[move].label} · ${MOVES[bot].emoji} AI: ${MOVES[bot].label} — ${result==='player'?'Bạn +1 điểm':result==='bot'?'AI +1 điểm':'Hòa'}${cheat?' · Có mùi gian lận':''}`);
+    state.round++;$('playerCard').classList.remove('winflash');$('botCard').classList.remove('winflash');
+    busy=false;render();
+    if(state.player>=3||state.bot>=3){if(state.player>=3)state.wins++;else state.losses++;setTimeout(()=>showEnd(state.player>=3?'player':'bot'),450);}
+  }
+  $('choices').addEventListener('click',e=>{const b=e.target.closest('button[data-move]');if(b)play(b.dataset.move);});
+  $('restartBtn').addEventListener('click',()=>startNewMatch(true));
+  $('modalRestart').addEventListener('click',()=>startNewMatch(true));
+  $('resetBtn').addEventListener('click',()=>{startNewMatch(false);toast('Đã xóa thành tích. Hệ thống giả vờ không nhớ gì.');});
+  $('helpBtn').addEventListener('click',()=>{toast('Búa thắng Kéo · Kéo thắng Bao · Bao thắng Búa. Đạt 3 điểm trước để thắng.');});
+  $('soundBtn').addEventListener('click',()=>{soundOn=!soundOn;$('soundBtn').textContent=soundOn?'🔊 Âm thanh: bật':'🔇 Âm thanh: tắt';$('soundBtn').setAttribute('aria-pressed',String(soundOn));if(soundOn)beep(520,.1);});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')$('modal').classList.remove('open');if(e.key.toLowerCase()==='r')startNewMatch(true);if(!e.repeat){const map={'1':'rock','2':'paper','3':'scissors'};if(map[e.key])play(map[e.key]);}});
+  startNewMatch(true);
+})();
+</script>
+</body>
+</html>

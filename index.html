@@ -14,26 +14,34 @@
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./">
-      <img src="assets/logo.jpg" alt="Logo" class="brand-img" />
-      <span>Thư viện số</span>
-    </a>
+    <div class="topbar-left" style="display: flex; align-items: center; gap: 0.75rem;">
+      <button id="menuToggle" class="icon-btn menu-toggle" aria-label="Mở menu">☰</button>
+      <a class="brand" href="./">
+        <img src="assets/logo.jpg" alt="Logo" class="brand-img" />
+        <span>Thư viện số</span>
+      </a>
+    </div>
     <div class="topbar-right">
       <button id="themeToggle" class="icon-btn" aria-label="Chuyển chế độ sáng/tối">🌙</button>
     </div>
   </header>
+  <div id="sidebarBackdrop" class="sidebar-backdrop hidden"></div>
 
   <div class="layout">
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-mobile-head">
+        <span style="font-weight: 700; font-size: 1.05rem;">Danh mục & Menu</span>
+        <button id="sidebarClose" class="icon-btn" style="width: 32px; height: 32px; font-size: 0.85rem;" aria-label="Đóng menu">✕</button>
+      </div>
       <button class="btn-primary" id="btnContribute">＋ Đóng góp</button>
       <nav>
         <a href="#" class="nav-link active" data-view="home"><span>🏠</span> Trang chủ</a>
         <a href="#" class="nav-link" data-view="library"><span>📚</span> Thư viện</a>
         <a href="#" class="nav-link" data-view="recent"><span>🕘</span> Gần đây</a>
-        <p class="nav-title">Công cụ</p>
-        <a href="#" class="nav-link" data-view="summary"><span>📝</span> Bản tóm tắt</a>
-        <a href="#" class="nav-link" data-view="errors"><span>🔍</span> Tìm lỗi sai</a>
-        <a href="#" class="nav-link" data-view="dup"><span>🧬</span> Quét trùng lặp</a>
+        <p class="nav-title">Danh mục</p>
+        <div id="catTree" class="cat-tree"></div>
+        <p class="nav-title">Giải trí</p>
+        <a href="#" class="nav-link" data-view="game" id="navGameLink" onclick="window.openGameView && window.openGameView(); return false;"><span>🎮</span> Búa Bao Kéo (AI)</a>
       </nav>
     </aside>
 
@@ -48,26 +56,166 @@
         <div id="recentList" class="card-row"></div>
       </section>
 
-      <section class="section">
-        <h2 id="mainTitle">Tất cả tài liệu</h2>
+      <section id="gameSection" class="section hidden">
+        <div class="game-container">
+          <header class="game-topbar">
+            <div class="game-brand">
+              <div class="game-logo">🤖</div>
+              <div>
+                <h1>AI GIAN LẬN</h1>
+                <p>Búa · Bao · Kéo — đấu trí với con máy mất nết</p>
+              </div>
+            </div>
+            <div class="game-top-actions">
+              <a href="game.html" target="_blank" class="game-btn-ghost" style="text-decoration: none;">↗ Tab mới</a>
+              <button class="game-btn-sound" id="gameSoundBtn" aria-pressed="false">🔇 Âm thanh: tắt</button>
+              <button class="game-btn-ghost" id="gameHelpBtn">❔ Luật chơi</button>
+            </div>
+          </header>
+
+          <div class="game-layout">
+            <section class="game-panel game-arena" id="gameArena">
+              <div class="game-arena-head">
+                <div class="game-eyebrow">⚡ TRẬN ĐẤU ĐANG DIỄN RA</div>
+                <div class="game-round" id="gameRoundLabel">VÁN 1 / BO5</div>
+              </div>
+
+              <div class="game-fighters">
+                <div class="game-fighter" id="gamePlayerCard">
+                  <span class="avatar">🧑‍🚀</span>
+                  <h2>BẠN</h2>
+                  <div class="sub">Tay chơi chính hiệu</div>
+                  <div class="game-choice" id="gamePlayerChoice">❔</div>
+                  <div class="game-hp-wrap"><div class="game-hp" id="gamePlayerHp"></div></div>
+                  <div class="game-scoreline"><span>Điểm của bạn</span><b id="gamePlayerScore">0</b></div>
+                </div>
+
+                <div class="game-vs">VS</div>
+
+                <div class="game-fighter" id="gameBotCard">
+                  <span class="avatar" id="gameBotAvatar">🤡</span>
+                  <h2>AI-999</h2>
+                  <div class="sub" id="gameBotMood">Tự tin hơi quá</div>
+                  <div class="game-choice" id="gameBotChoice">❔</div>
+                  <div class="game-hp-wrap"><div class="game-hp" id="gameBotHp"></div></div>
+                  <div class="game-scoreline"><span>Điểm của máy</span><b id="gameBotScore">0</b></div>
+                </div>
+              </div>
+
+              <div class="game-speech">
+                <div class="game-speech-icon" id="gameSpeechIcon">💬</div>
+                <div>
+                  <small id="gameSpeaker">AI-999 NÓI</small>
+                  <p id="gameTaunt" aria-live="polite">Chào người chơi. Tôi đã đọc 0 cuốn sách về công bằng.</p>
+                </div>
+              </div>
+
+              <div class="game-result" id="gameResult" aria-live="polite">Chọn một chiêu để bắt đầu cuộc chiến!</div>
+
+              <div class="game-choices" id="gameChoices">
+                <button class="game-pick" data-move="rock"><span class="emoji">✊</span><b>BÚA</b><small>Đấm phát tỉnh</small></button>
+                <button class="game-pick" data-move="paper"><span class="emoji">✋</span><b>BAO</b><small>Ôm trọn chiến thắng</small></button>
+                <button class="game-pick" data-move="scissors"><span class="emoji">✌️</span><b>KÉO</b><small>Cắt drama</small></button>
+              </div>
+
+              <div class="game-arena-foot">
+                <span>🎯 Ai đạt 3 điểm trước sẽ thắng. Phím tắt: 1, 2, 3</span>
+                <span>👀 Coi chừng máy giở trò!</span>
+              </div>
+            </section>
+
+            <aside class="game-side">
+              <section class="game-panel game-stats">
+                <h3>📊 BẢNG THÀNH TÍCH</h3>
+                <div class="game-scorecards">
+                  <div class="game-stat"><strong id="gameWins">0</strong><span>Bạn thắng</span></div>
+                  <div class="game-stat"><strong id="gameLosses">0</strong><span>Máy thắng</span></div>
+                  <div class="game-stat"><strong id="gameCheats">0</strong><span>Lần gian lận</span></div>
+                </div>
+                <div class="game-meter-title">
+                  <span>Độ cay của AI 🌶️</span>
+                  <b id="gameRageText">0%</b>
+                </div>
+                <div class="game-meter"><div id="gameRageMeter"></div></div>
+              </section>
+
+              <section class="game-panel game-log">
+                <h3>🧾 NHẬT KÝ DRAMA</h3>
+                <div class="game-feed" id="gameFeed">
+                  <div class="feed-item"><span class="dot"></span><span>AI-999 đã vào phòng. <em>Trông đáng nghi.</em></span></div>
+                </div>
+              </section>
+
+              <section class="game-panel game-rules">
+                <h3>🧠 AI gian lận kiểu gì?</h3>
+                <ul>
+                  <li><b>Nhìn trộm:</b> đôi khi đoán được chiêu bạn vừa chọn.</li>
+                  <li><b>Tua ngược:</b> lật kết quả khi bạn sắp thắng.</li>
+                  <li><b>Luật riêng:</b> máy có thể tuyên bố hòa để né thua.</li>
+                  <li><b>Càng thua càng cay:</b> càng gần thất bại, AI càng giở trò.</li>
+                  <li><b>Không bất khả chiến bại:</b> máy vẫn có thể bị đánh bại! 😏</li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+
+          <div class="game-bottom">
+            <button class="game-primary" id="gameRestartBtn">↻ Chơi ván mới</button>
+            <button class="game-danger" id="gameResetBtn">Xóa thành tích</button>
+          </div>
+        </div>
+
+        <div id="gameToast" role="status"></div>
+
+        <div id="gameModal" role="dialog" aria-modal="true">
+          <div class="modal-card">
+            <div class="big" id="gameModalEmoji">🏆</div>
+            <h2 id="gameModalTitle">Bạn thắng!</h2>
+            <p id="gameModalText">AI đang giả vờ mất kết nối để giữ thể diện.</p>
+            <button class="game-primary" id="gameModalRestart">Chọc nó ván nữa ↻</button>
+          </div>
+        </div>
+      </section>
+<section id="mainSection" class="section">
+  <h2 id="mainTitle">Tất cả tài liệu</h2>
         <div class="chips" id="chips">
           <select id="filterSubject"><option value="">Tất cả môn</option></select>
           <select id="filterYear"><option value="">Mọi năm</option></select>
           <select id="filterType"><option value="">Mọi loại</option></select>
+          <select id="filterAudience"><option value="">Mọi đối tượng</option></select>
+          <select id="filterFormat"><option value="">Mọi định dạng</option></select>
         </div>
         <div id="bookList" class="card-row wrap"></div>
       </section>
     </main>
   </div>
 
-  <div id="pdfModal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close" id="pdfClose">&times;</span>
-      <canvas id="pdfCanvas"></canvas>
+  <div id="pdfModal" class="reader hidden">
+    <div class="reader-bar">
+      <button id="pdfClose" class="btn-back" type="button">← Quay lại thư viện</button>
+      <div class="reader-info">
+        <strong id="readerTitle"></strong>
+        <span id="readerMeta"></span>
+      </div>
+      <div class="zoom">
+        <button id="zoomOut" class="btn-back" type="button" aria-label="Thu nhỏ">−</button>
+        <span id="zoomLevel">100%</span>
+        <button id="zoomIn" class="btn-back" type="button" aria-label="Phóng to">+</button>
+      </div>
+      <a id="readerDownload" class="btn-back" href="#" download>⬇ Tải xuống</a>
+      <button id="readerShare" class="btn-back" type="button">🔗 Chia sẻ</button>
+      <a id="readerOpen" class="btn-ghost" href="#" target="_blank" rel="noopener">Mở tab mới ↗</a>
+    </div>
+    <div class="reader-body">
+      <aside id="thumbs" class="thumbs" aria-label="Trang xem trước"></aside>
+      <div id="pdfPages" class="pdf-pages"></div>
+      <aside id="summaryPanel" class="summary-panel" aria-label="Bản tóm tắt"></aside>
     </div>
   </div>
+  <div id="toast" class="toast hidden"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
-  <script src="app.js"></script>
+  <script src="game.js?v=20261012b"></script>
+  <script src="app.js?v=20261012b"></script>
 </body>
 </html>

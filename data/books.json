@@ -1,24 +1,1129 @@
 [
-  {
-    "id": "001",
-    "title": "Giáo trình Kinh tế vi mô",
-    "author": "Nguyễn Văn A",
-    "subject": "Kinh tế",
-    "year": 2024,
-    "type": "giáo trình",
-    "tags": ["vi mô", "đại cương"],
-    "file": "files/kinh-te-vi-mo.pdf",
-    "cover": "files/covers/001.jpg"
-  },
-  {
-    "id": "002",
-    "title": "Toán Cao cấp – Lý thuyết hàm số",
-    "author": "Trần Thị B",
-    "subject": "Toán",
-    "year": 2023,
-    "type": "giáo trình",
-    "tags": ["hàm số", "đại số"] ,
-    "file": "files/toan-cao-cap.pdf",
-    "cover": "files/covers/002.jpg"
-  }
+    {
+        "id": "001",
+        "category": "lich-su-viet-nam",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "Hồ Chí Minh – Chân dung một cuộc đời",
+        "author": "Nhiều tác giả",
+        "subject": "Lịch sử",
+        "year": 2010,
+        "type": "tiểu sử",
+        "tags": [
+            "Hồ Chí Minh",
+            "lịch sử",
+            "tiểu sử"
+        ],
+        "file": "files/lichsu/9966-ho-chi-minh-chan-dung-mot-cuoc-doi-thuviensach.vn.pdf",
+        "cover": "files/covers/010.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "002",
+        "category": "lich-su-viet-nam",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "Đại Việt Sử Ký Toàn Thư",
+        "author": "Ngô Sĩ Liên",
+        "subject": "Lịch sử",
+        "year": 1697,
+        "type": "sử liệu",
+        "tags": [
+            "Đại Việt",
+            "sử ký",
+            "lịch sử cổ"
+        ],
+        "file": "files/lichsu/Dai-viet-su-ki-toan-thu.pdf",
+        "cover": "files/covers/011.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "003",
+        "category": "lich-su-viet-nam",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "Đại Việt Sử Ký Toàn Thư (bản Lê Văn Hưu – Phan Phu Tiên – Ngô Sĩ Liên)",
+        "author": "Lê Văn Hưu, Phan Phu Tiên, Ngô Sĩ Liên",
+        "subject": "Lịch sử",
+        "year": 1697,
+        "type": "sử liệu",
+        "tags": [
+            "Đại Việt",
+            "sử ký",
+            "lịch sử cổ"
+        ],
+        "file": "files/lichsu/dai-viet-su-ky-toan-thu-le-van-huu-phan-phu-tien-ngo-si-lien.pdf",
+        "cover": "files/covers/012.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "005",
+        "category": "lich-su-viet-nam",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "Khâm Định Việt Sử Thông Giám Cương Mục (bản Quốc sử quán triều Nguyễn)",
+        "author": "Quốc sử quán triều Nguyễn",
+        "subject": "Lịch sử",
+        "year": 1884,
+        "type": "sử liệu",
+        "tags": [
+            "Nguyễn",
+            "cương mục",
+            "lịch sử"
+        ],
+        "file": "files/lichsu/kham-dinh-viet-su-thong-giam-cuong-muc-quoc-su-quan-trieu-nguyen.pdf",
+        "cover": "files/covers/014.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "007",
+        "category": "lich-su-viet-nam",
+        "audience": "Sinh viên",
+        "format": "Tài liệu",
+        "title": "Lưu bản nháp tự động – Chương II",
+        "author": "Không rõ",
+        "subject": "Lịch sử",
+        "year": 2023,
+        "type": "tài liệu học tập",
+        "tags": [
+            "chương II",
+            "tài liệu học tập"
+        ],
+        "file": "files/lichsu/luu-ban-nhap-tu-dong-5-8.pdf",
+        "cover": "files/covers/016.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "008",
+        "category": "lich-su-viet-nam",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "Nam Việt Lược Sử",
+        "author": "Không rõ",
+        "subject": "Lịch sử",
+        "year": 1900,
+        "type": "sử liệu",
+        "tags": [
+            "Nam Việt",
+            "lược sử",
+            "lịch sử"
+        ],
+        "file": "files/lichsu/nam-viet-luoc-su.pdf",
+        "cover": "files/covers/010.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "009",
+        "category": "lich-su-the-gioi",
+        "audience": "Người lớn",
+        "format": "Tài liệu",
+        "title": "Pentagon Papers – Phần I",
+        "author": "Bộ Quốc phòng Hoa Kỳ",
+        "subject": "Lịch sử",
+        "year": 1971,
+        "type": "hồ sơ mật",
+        "tags": [
+            "Pentagon",
+            "Chiến tranh Việt Nam",
+            "Hoa Kỳ"
+        ],
+        "file": "files/lichsu/Pentagon-Papers-Part-I.pdf",
+        "cover": "files/covers/011.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "010",
+        "category": "lich-su-the-gioi",
+        "audience": "Người lớn",
+        "format": "Tài liệu",
+        "title": "Pentagon Papers – Phần II",
+        "author": "Bộ Quốc phòng Hoa Kỳ",
+        "subject": "Lịch sử",
+        "year": 1971,
+        "type": "hồ sơ mật",
+        "tags": [
+            "Pentagon",
+            "Chiến tranh Việt Nam",
+            "Hoa Kỳ"
+        ],
+        "file": "files/lichsu/Pentagon-Papers-Part-II.pdf",
+        "cover": "files/covers/012.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "011",
+        "category": "lich-su-the-gioi",
+        "audience": "Người lớn",
+        "format": "Tài liệu",
+        "title": "Pentagon Papers – Phần III",
+        "author": "Bộ Quốc phòng Hoa Kỳ",
+        "subject": "Lịch sử",
+        "year": 1971,
+        "type": "hồ sơ mật",
+        "tags": [
+            "Pentagon",
+            "Chiến tranh Việt Nam",
+            "Hoa Kỳ"
+        ],
+        "file": "files/lichsu/Pentagon-Papers-Part-III.pdf",
+        "cover": "files/covers/013.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "012",
+        "category": "lich-su-viet-nam",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "Sử Ký Đại Nam Việt",
+        "author": "Không rõ",
+        "subject": "Lịch sử",
+        "year": 1900,
+        "type": "sử liệu",
+        "tags": [
+            "Đại Nam Việt",
+            "sử ký",
+            "lịch sử"
+        ],
+        "file": "files/lichsu/su-ky-dai-nam-viet.pdf",
+        "cover": "files/covers/014.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "013",
+        "category": "lich-su-viet-nam",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "Sử Ký Nước Annam (Kê Tát)",
+        "author": "Không rõ",
+        "subject": "Lịch sử",
+        "year": 1900,
+        "type": "sử liệu",
+        "tags": [
+            "Annam",
+            "sử ký",
+            "lịch sử"
+        ],
+        "file": "files/lichsu/su-ky-nuoc-annam-ke-tat.pdf",
+        "cover": "files/covers/015.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "014",
+        "category": "lich-su-viet-nam",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "Việt Nam Sử Lược – Trần Trọng Kim",
+        "author": "Trần Trọng Kim",
+        "subject": "Lịch sử",
+        "year": 1920,
+        "type": "sử liệu",
+        "tags": [
+            "Việt Nam",
+            "sử lược",
+            "Trần Trọng Kim"
+        ],
+        "file": "files/lichsu/viet-nam-su-luoc-tran-trong-kim1.pdf",
+        "cover": "files/covers/016.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "015",
+        "category": "lich-su-viet-nam",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "An Tĩnh Tâm Sự (Chí Thơ)",
+        "author": "Không rõ",
+        "subject": "Lịch sử",
+        "year": 1900,
+        "type": "hồi ký",
+        "tags": [
+            "An Tĩnh",
+            "tâm sự",
+            "chí thơ"
+        ],
+        "file": "files/lichsu/an-tinh-tam-su-chi-tho.pdf",
+        "cover": "files/covers/010.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "016",
+        "category": "lich-su-viet-nam",
+        "audience": "Sinh viên",
+        "format": "Tài liệu",
+        "title": "Chương II – Tài liệu học tập",
+        "author": "Không rõ",
+        "subject": "Lịch sử",
+        "year": 2023,
+        "type": "tài liệu học tập",
+        "tags": [
+            "chương II",
+            "học tập"
+        ],
+        "file": "files/lichsu/chuongII.pdf",
+        "cover": "files/covers/011.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "018",
+        "category": "ngoai-ngu",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "Dictionnaire Annamite-Français",
+        "author": "Jean-Louis Taberd",
+        "subject": "Ngoại ngữ",
+        "year": 1838,
+        "type": "từ điển",
+        "tags": [
+            "tiếng Việt",
+            "tiếng Pháp",
+            "từ điển",
+            "Taberd"
+        ],
+        "file": "files/ngoaingu/dictionnaire-annamite-francais.pdf",
+        "cover": "files/covers/013.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "019",
+        "category": "van-hoc-viet-nam",
+        "audience": "Học sinh",
+        "format": "Tài liệu",
+        "title": "Bài 7 – Tiểu thuyết hiện đại: Hạnh Phúc Của Một Tang Gia (9 tiết)",
+        "author": "Nhiều tác giả",
+        "subject": "Văn học",
+        "year": 2023,
+        "type": "tài liệu học tập",
+        "tags": [
+            "tiểu thuyết",
+            "Hạnh Phúc Của Một Tang Gia",
+            "văn học hiện đại"
+        ],
+        "file": "files/vanhoc/[studocu.com] - BÀI 7 - TIỂU THUYẾT HIỆN ĐẠI - HẠNH PHÚC CỦA MỘT TANG GIA (9 TIẾT).pdf",
+        "cover": "files/covers/014.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "020",
+        "category": "van-hoc-viet-nam",
+        "audience": "Học sinh",
+        "format": "Tài liệu",
+        "title": "Kịch Bản Hồn Trương Ba – Da Hàng Thịt (Lưu Quang Vũ)",
+        "author": "Lưu Quang Vũ",
+        "subject": "Văn học",
+        "year": 2023,
+        "type": "kịch bản",
+        "tags": [
+            "Hồn Trương Ba",
+            "Da Hàng Thịt",
+            "Lưu Quang Vũ",
+            "kịch"
+        ],
+        "file": "files/vanhoc/[studocu.com] - Kịch Bản Hồn Trương Ba - Da Hàng Thịt (Kịch LQV) Chi Tiết.pdf",
+        "cover": "files/covers/015.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "021",
+        "category": "van-hoc-viet-nam",
+        "audience": "Học sinh",
+        "format": "Tài liệu",
+        "title": "Đề Luyện Tuần 23 – Truyện An Dương Vương và Mị Châu Trọng Thuỷ",
+        "author": "Nhiều tác giả",
+        "subject": "Văn học",
+        "year": 2023,
+        "type": "đề luyện thi",
+        "tags": [
+            "An Dương Vương",
+            "Mị Châu",
+            "Trọng Thuỷ",
+            "luyện thi"
+        ],
+        "file": "files/vanhoc/[studocu.com] - ĐỀ LUYỆN TUẦN 23 - TRUYỆN AN DƯƠNG VƯƠNG VÀ MỊ CHÂU TRỌNG THUỶ.pdf",
+        "cover": "files/covers/016.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "022",
+        "category": "van-hoc-viet-nam",
+        "audience": "Học sinh",
+        "format": "Tài liệu",
+        "title": "Đồng Chí (Chính Hữu) – Tài Liệu Học Tập Về Tình Đồng Chí Trong Thơ",
+        "author": "Chính Hữu",
+        "subject": "Văn học",
+        "year": 2023,
+        "type": "tài liệu học tập",
+        "tags": [
+            "Đồng Chí",
+            "Chính Hữu",
+            "thơ",
+            "học tập"
+        ],
+        "file": "files/vanhoc/[studocu.com] - ĐỒNG CHÍ (Chính Hữu) - Tài Liệu Học Tập Về Tình Đồng Chí Trong Thơ.pdf",
+        "cover": "files/covers/010.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "023",
+        "category": "van-hoc-viet-nam",
+        "audience": "Học sinh",
+        "format": "Sách",
+        "title": "Chí Phèo – Nam Cao",
+        "author": "Nam Cao",
+        "subject": "Văn học",
+        "year": 1941,
+        "type": "truyện ngắn",
+        "tags": [
+            "Chí Phèo",
+            "Nam Cao",
+            "truyện ngắn",
+            "hiện thực"
+        ],
+        "file": "files/vanhoc/chi-pheo-nam-cao_23220239224.pdf",
+        "cover": "files/covers/011.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "024",
+        "category": "van-hoc-viet-nam",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "Truyện Kiều – Nguyễn Du",
+        "author": "Nguyễn Du",
+        "subject": "Văn học",
+        "year": 1820,
+        "type": "thơ",
+        "tags": [
+            "Truyện Kiều",
+            "Nguyễn Du",
+            "thơ lục bát",
+            "kim vân kiều"
+        ],
+        "file": "files/vanhoc/kim-van-kieu.pdf",
+        "cover": "files/covers/012.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "025",
+        "category": "van-hoc-viet-nam",
+        "audience": "Học sinh",
+        "format": "Sách",
+        "title": "Lão Hạc – Nam Cao",
+        "author": "Nam Cao",
+        "subject": "Văn học",
+        "year": 1943,
+        "type": "truyện ngắn",
+        "tags": [
+            "Lão Hạc",
+            "Nam Cao",
+            "truyện ngắn"
+        ],
+        "file": "files/vanhoc/lao-hac-nam-cao_232202392613.pdf",
+        "cover": "files/covers/013.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "026",
+        "category": "van-hoc-viet-nam",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "Lục Vân Tiên – Nguyễn Đình Chiểu",
+        "author": "Nguyễn Đình Chiểu",
+        "subject": "Văn học",
+        "year": 1864,
+        "type": "thơ",
+        "tags": [
+            "Lục Vân Tiên",
+            "Nguyễn Đình Chiểu",
+            "thơ lục bát"
+        ],
+        "file": "files/vanhoc/luc-van-tien.pdf",
+        "cover": "files/covers/014.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "027",
+        "category": "van-hoc-viet-nam",
+        "audience": "Trẻ em",
+        "format": "Sách",
+        "title": "Thạch Sanh",
+        "author": "Truyện cổ tích Việt Nam",
+        "subject": "Văn học",
+        "year": 2000,
+        "type": "truyện cổ tích",
+        "tags": [
+            "Thạch Sanh",
+            "cổ tích",
+            "thiếu nhi"
+        ],
+        "file": "files/vanhoc/thach-sanh.pdf",
+        "cover": "files/covers/015.jpg",
+        "license": "Public Domain"
+    },
+    {
+        "id": "028",
+        "category": "van-hoc-viet-nam",
+        "audience": "Sinh viên",
+        "format": "Tài liệu",
+        "title": "Tài liệu văn học tổng hợp",
+        "author": "Nhiều tác giả",
+        "subject": "Văn học",
+        "year": 2023,
+        "type": "tài liệu tham khảo",
+        "tags": [
+            "văn học",
+            "tổng hợp",
+            "học tập"
+        ],
+        "file": "files/vanhoc/4a62b60aa4e99c8ad7db7501575e9ab648abea03.pdf",
+        "cover": "files/covers/016.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "029",
+        "category": "cong-nghe-so",
+        "audience": "Thanh niên",
+        "format": "Tài liệu",
+        "title": "Tài liệu bồi dưỡng Tăng cường năng lực Chuyển đổi số",
+        "author": "Trung ương Đoàn TNCS Hồ Chí Minh",
+        "subject": "Công nghệ số",
+        "year": 2024,
+        "type": "tài liệu tập huấn",
+        "tags": [
+            "chuyển đổi số",
+            "công nghệ số",
+            "năng lực số",
+            "thanh niên"
+        ],
+        "file": "files/congngheso/66dbcd4fdbb9c.pdf",
+        "cover": "files/covers/010.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "030",
+        "category": "cong-nghe-so",
+        "audience": "Học sinh - Sinh viên",
+        "format": "Giáo trình",
+        "title": "Bài giảng Điện toán đám mây",
+        "author": "ThS. Phan Hồ Duy Phương",
+        "subject": "Công nghệ số",
+        "year": 2023,
+        "type": "bài giảng",
+        "tags": [
+            "điện toán đám mây",
+            "cloud computing",
+            "công nghệ thông tin"
+        ],
+        "file": "files/congngheso/Dien toan dam may v7.pdf",
+        "cover": "files/covers/011.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "031",
+        "category": "tri-tue-nhan-tao",
+        "audience": "Học sinh - Sinh viên",
+        "format": "Sách",
+        "title": "Ứng dụng Trí tuệ Nhân tạo trong Học tập và Nghề nghiệp",
+        "author": "Nhiều tác giả",
+        "subject": "Trí tuệ nhân tạo (AI)",
+        "year": 2024,
+        "type": "sách chuyên khảo",
+        "tags": [
+            "trí tuệ nhân tạo",
+            "AI",
+            "học tập",
+            "nghề nghiệp",
+            "công nghệ"
+        ],
+        "file": "files/congngheso/ung_dung_tri_tue_nhan_tao_trong_hoc_tap_va_nghe_nghiep.pdf",
+        "cover": "files/covers/012.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "032",
+        "category": "doan-thanh-nien",
+        "audience": "Đoàn viên - Thanh niên",
+        "format": "Văn bản",
+        "title": "Hướng dẫn số 60-HD/TWĐTN-TCKT thực hiện Điều lệ Đoàn TNCS Hồ Chí Minh",
+        "author": "Ban Chấp hành Trung ương Đoàn TNCS Hồ Chí Minh",
+        "subject": "Đoàn – Hội – Đội",
+        "year": 2025,
+        "type": "hướng dẫn nghiệp vụ",
+        "tags": [
+            "Đoàn Thanh niên",
+            "Điều lệ Đoàn",
+            "hướng dẫn thực hiện",
+            "TW Đoàn"
+        ],
+        "file": "files/doanthanhnie/document.pdf",
+        "cover": "files/covers/013.jpg",
+        "license": "Văn bản lưu hành công khai"
+    },
+    {
+        "id": "033",
+        "category": "doan-thanh-nien",
+        "audience": "Đoàn viên - Thanh niên",
+        "format": "Văn bản",
+        "title": "Quyết định sửa đổi, bổ sung Hướng dẫn thực hiện Điều lệ Đoàn",
+        "author": "Ban Chấp hành Trung ương Đoàn TNCS Hồ Chí Minh",
+        "subject": "Đoàn – Hội – Đội",
+        "year": 2025,
+        "type": "quyết định",
+        "tags": [
+            "Đoàn Thanh niên",
+            "quyết định",
+            "sửa đổi bổ sung",
+            "TW Đoàn"
+        ],
+        "file": "files/doanthanhnie/document (3).pdf",
+        "cover": "files/covers/014.jpg",
+        "license": "Văn bản lưu hành công khai"
+    },
+    {
+        "id": "034",
+        "category": "doi-thieu-nien",
+        "audience": "Thanh thiếu nhi",
+        "format": "Tài liệu",
+        "title": "Đề cương tuyên truyền 80 năm Ngày thành lập Đội TNTP Hồ Chí Minh",
+        "author": "Hội đồng Đội Trung ương",
+        "subject": "Đoàn – Hội – Đội",
+        "year": 2021,
+        "type": "đề cương tuyên truyền",
+        "tags": [
+            "Đội Thiếu niên",
+            "Đội TNTP Hồ Chí Minh",
+            "80 năm truyền thống",
+            "tuyên truyền"
+        ],
+        "file": "files/doithanhnie/De-cuong-tuyen-truyen-80-nam.pdf",
+        "cover": "files/covers/015.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "035",
+        "category": "doi-thieu-nien",
+        "audience": "Thanh thiếu nhi",
+        "format": "Văn bản",
+        "title": "Điều lệ Đội Thiếu niên Tiền phong Hồ Chí Minh",
+        "author": "Hội đồng Đội Trung ương",
+        "subject": "Đoàn – Hội – Đội",
+        "year": 2023,
+        "type": "điều lệ",
+        "tags": [
+            "Điều lệ Đội",
+            "Đội TNTP Hồ Chí Minh",
+            "thiếu nhi",
+            "Hội đồng Đội"
+        ],
+        "file": "files/doithanhnie/Dieu-le-Doi-Thieu-nien-Tien-phong-Ho-Chi-Minh.pdf",
+        "cover": "files/covers/016.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "036",
+        "category": "doi-thieu-nien",
+        "audience": "Thanh thiếu nhi",
+        "format": "Tài liệu",
+        "title": "Nghi thức và Hướng dẫn thực hiện Nghi thức Đội TNTP Hồ Chí Minh",
+        "author": "Hội đồng Đội Trung ương",
+        "subject": "Đoàn – Hội – Đội",
+        "year": 2020,
+        "type": "nghi thức Đội",
+        "tags": [
+            "nghi thức Đội",
+            "Đội TNTP Hồ Chí Minh",
+            "hướng dẫn nghi thức",
+            "đội viên"
+        ],
+        "file": "files/doithanhnie/Nghi-thuc_637346923402157619.pdf",
+        "cover": "files/covers/010.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "037",
+        "category": "khoa-hoc",
+        "audience": "Học sinh - Sinh viên",
+        "format": "Giáo trình",
+        "title": "Giáo trình Hóa học hữu cơ (Tập 1)",
+        "author": "Nhiều tác giả",
+        "subject": "Khoa học",
+        "year": 2020,
+        "type": "giáo trình đại học",
+        "tags": [
+            "hóa học",
+            "hóa hữu cơ",
+            "khoa học tự nhiên",
+            "hóa học 1"
+        ],
+        "file": "files/khoahoc/2_Hóa học hữu cơ 1.pdf",
+        "cover": "files/covers/011.jpg",
+        "license": "Tài liệu học tập"
+    },
+    {
+        "id": "038",
+        "category": "khoa-hoc",
+        "audience": "Học sinh",
+        "format": "Tài liệu",
+        "title": "Giáo án Sinh học 9 – Phát triển năng lực (Menđen và Di truyền học)",
+        "author": "Tailieugiaovien.edu.vn",
+        "subject": "Khoa học",
+        "year": 2023,
+        "type": "giáo án giảng dạy",
+        "tags": [
+            "sinh học",
+            "sinh 9",
+            "di truyền học",
+            "Menđen",
+            "phát triển năng lực"
+        ],
+        "file": "files/khoahoc/SINH-9-PTNL-THEO-4-BƯỚC.pdf",
+        "cover": "files/covers/012.jpg",
+        "license": "Tài liệu giáo dục"
+    },
+    {
+        "id": "039",
+        "category": "khoa-hoc",
+        "audience": "Học sinh - Sinh viên",
+        "format": "Giáo trình",
+        "title": "Giáo trình Toán rời rạc",
+        "author": "GS.TS. Nguyễn Đức Nghĩa, PGS.TS. Nguyễn Tô Thành",
+        "subject": "Khoa học",
+        "year": 2009,
+        "type": "giáo trình đại học",
+        "tags": [
+            "toán rời rạc",
+            "toán học",
+            "công nghệ thông tin",
+            "ĐHQG Hà Nội"
+        ],
+        "file": "files/khoahoc/TRR_NguyenDucNghia.pdf",
+        "cover": "files/covers/013.jpg",
+        "license": "Tài liệu học tập"
+    },
+    {
+        "id": "040",
+        "category": "khoa-hoc",
+        "audience": "Học sinh - Sinh viên",
+        "format": "Giáo trình",
+        "title": "Giáo trình Lập trình C",
+        "author": "ThS. Lê Phú Hiếu (ĐH Mở TP.HCM)",
+        "subject": "Khoa học",
+        "year": 2018,
+        "type": "giáo trình đại học",
+        "tags": [
+            "lập trình C",
+            "ngôn ngữ C",
+            "khoa học máy tính",
+            "tin học đại cương"
+        ],
+        "file": "files/khoahoc/giaotrinhlaptrinhc.pdf",
+        "cover": "files/covers/014.jpg",
+        "license": "Tài liệu học tập"
+    },
+    {
+        "id": "041",
+        "category": "khoa-hoc",
+        "audience": "Học sinh - Sinh viên",
+        "format": "Giáo trình",
+        "title": "Giáo trình Hóa đại cương – Vô cơ",
+        "author": "Trường Đại học Tây Đô",
+        "subject": "Khoa học",
+        "year": 2019,
+        "type": "giáo trình đại học",
+        "tags": [
+            "hóa đại cương",
+            "hóa vô cơ",
+            "khoa học tự nhiên",
+            "hóa học"
+        ],
+        "file": "files/khoahoc/gt-hoa-dai-cuong-vo-co.pdf",
+        "cover": "files/covers/015.jpg",
+        "license": "Tài liệu học tập"
+    },
+    {
+        "id": "042",
+        "category": "khoa-hoc",
+        "audience": "Người lớn",
+        "format": "Tài liệu",
+        "title": "Hướng dẫn Lập trình Python cơ bản",
+        "author": "Tài liệu đào tạo",
+        "subject": "Khoa học",
+        "year": 2023,
+        "type": "tài liệu hướng dẫn",
+        "tags": [
+            "Python",
+            "lập trình cơ bản",
+            "khoa học máy tính",
+            "code"
+        ],
+        "file": "files/khoahoc/huong_dan_python_co_ban.pdf",
+        "cover": "files/covers/016.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "043",
+        "category": "khoa-hoc",
+        "audience": "Học sinh - Sinh viên",
+        "format": "Giáo trình",
+        "title": "Ngôn ngữ Lập trình Python",
+        "author": "TS. Đỗ Thanh Nghị, TS. Phạm Nguyên Khang (ĐH Cần Thơ)",
+        "subject": "Khoa học",
+        "year": 2021,
+        "type": "giáo trình đại học",
+        "tags": [
+            "Python",
+            "ngôn ngữ lập trình",
+            "Đại học Cần Thơ",
+            "khoa học dữ liệu"
+        ],
+        "file": "files/khoahoc/python.pdf",
+        "cover": "files/covers/010.jpg",
+        "license": "Tài liệu học tập"
+    },
+    {
+        "id": "044",
+        "category": "kinh-te",
+        "audience": "Người lớn",
+        "format": "Văn bản",
+        "title": "Luật Doanh nghiệp số 59/2020/QH14",
+        "author": "Quốc hội nước CHXHCN Việt Nam",
+        "subject": "Kinh tế",
+        "year": 2020,
+        "type": "luật",
+        "tags": [
+            "Luật Doanh nghiệp",
+            "kinh tế",
+            "kinh doanh",
+            "doanh nghiệp",
+            "59/2020/QH14"
+        ],
+        "file": "files/kinhte/59.signed.pdf",
+        "cover": "files/covers/011.jpg",
+        "license": "Công báo Nhà nước"
+    },
+    {
+        "id": "045",
+        "category": "kinh-te",
+        "audience": "Người lớn",
+        "format": "Văn bản",
+        "title": "Luật Đầu tư số 61/2020/QH14",
+        "author": "Quốc hội nước CHXHCN Việt Nam",
+        "subject": "Kinh tế",
+        "year": 2020,
+        "type": "luật",
+        "tags": [
+            "Luật Đầu tư",
+            "đầu tư",
+            "kinh tế",
+            "dự án",
+            "61/2020/QH14"
+        ],
+        "file": "files/kinhte/61.signed.pdf",
+        "cover": "files/covers/012.jpg",
+        "license": "Công báo Nhà nước"
+    },
+    {
+        "id": "046",
+        "category": "kinh-te",
+        "audience": "Người lớn",
+        "format": "Văn bản",
+        "title": "Phụ lục Danh mục ngành nghề đầu tư có điều kiện (Luật Đầu tư 2020)",
+        "author": "Quốc hội nước CHXHCN Việt Nam",
+        "subject": "Kinh tế",
+        "year": 2020,
+        "type": "phụ lục luật",
+        "tags": [
+            "ngành nghề kinh doanh",
+            "đầu tư có điều kiện",
+            "Luật Đầu tư",
+            "phụ lục"
+        ],
+        "file": "files/kinhte/61pl.pdf",
+        "cover": "files/covers/013.jpg",
+        "license": "Công báo Nhà nước"
+    },
+    {
+        "id": "047",
+        "category": "kinh-te",
+        "audience": "Người lớn",
+        "format": "Văn bản",
+        "title": "Luật Việc làm số 74/2025/QH15",
+        "author": "Quốc hội nước CHXHCN Việt Nam",
+        "subject": "Kinh tế",
+        "year": 2025,
+        "type": "luật",
+        "tags": [
+            "Luật Việc làm",
+            "thị trường lao động",
+            "bảo hiểm thất nghiệp",
+            "kinh tế xã hội",
+            "74/2025/QH15"
+        ],
+        "file": "files/kinhte/74qh15.signed.pdf",
+        "cover": "files/covers/014.jpg",
+        "license": "Công báo Nhà nước"
+    },
+    {
+        "id": "048",
+        "category": "phap-luat",
+        "audience": "Người lớn",
+        "format": "Văn bản",
+        "title": "Văn bản hợp nhất 108/VBHN-VPQH: Luật Trẻ em",
+        "author": "Văn phòng Quốc hội",
+        "subject": "Pháp luật",
+        "year": 2020,
+        "type": "văn bản hợp nhất",
+        "tags": [
+            "Luật Trẻ em",
+            "quyền trẻ em",
+            "văn bản hợp nhất",
+            "pháp luật"
+        ],
+        "file": "files/phapluat/108-vbhn-vpqh.pdf",
+        "cover": "files/covers/015.jpg",
+        "license": "Công báo Nhà nước"
+    },
+    {
+        "id": "049",
+        "category": "phap-luat",
+        "audience": "Người lớn",
+        "format": "Văn bản",
+        "title": "Luật Các tổ chức tín dụng số 32/2024/QH15",
+        "author": "Quốc hội nước CHXHCN Việt Nam",
+        "subject": "Pháp luật",
+        "year": 2024,
+        "type": "luật",
+        "tags": [
+            "tổ chức tín dụng",
+            "ngân hàng",
+            "tài chính",
+            "32/2024/QH15",
+            "pháp luật"
+        ],
+        "file": "files/phapluat/2024_369 + 370_32-2024-QH15.pdf",
+        "cover": "files/covers/016.jpg",
+        "license": "Công báo Nhà nước"
+    },
+    {
+        "id": "050",
+        "category": "phap-luat",
+        "audience": "Người lớn",
+        "format": "Văn bản",
+        "title": "Luật Đường bộ số 35/2024/QH15",
+        "author": "Quốc hội nước CHXHCN Việt Nam",
+        "subject": "Pháp luật",
+        "year": 2024,
+        "type": "luật",
+        "tags": [
+            "Luật Đường bộ",
+            "giao thông",
+            "hạ tầng đường bộ",
+            "35/2024/QH15"
+        ],
+        "file": "files/phapluat/2024_983 + 984_35-2024-QH15.pdf",
+        "cover": "files/covers/010.jpg",
+        "license": "Công báo Nhà nước"
+    },
+    {
+        "id": "051",
+        "category": "phap-luat",
+        "audience": "Người lớn",
+        "format": "Văn bản",
+        "title": "Luật Quản lý, sử dụng vũ khí, vật liệu nổ và công cụ hỗ trợ số 42/2024/QH15",
+        "author": "Quốc hội nước CHXHCN Việt Nam",
+        "subject": "Pháp luật",
+        "year": 2024,
+        "type": "luật",
+        "tags": [
+            "vũ khí",
+            "vật liệu nổ",
+            "công cụ hỗ trợ",
+            "an ninh trật tự",
+            "42/2024/QH15"
+        ],
+        "file": "files/phapluat/2024_989 + 990_42-2024-QH15.pdf",
+        "cover": "files/covers/011.jpg",
+        "license": "Công báo Nhà nước"
+    },
+    {
+        "id": "052",
+        "category": "dia-ly-van-hoa",
+        "audience": "Người lớn",
+        "format": "Tài liệu",
+        "title": "Di sản Văn hóa Phi vật thể và Phát triển bền vững",
+        "author": "UNESCO & Cục Di sản Văn hóa",
+        "subject": "Địa lý – Văn hóa – Dân tộc Việt Nam",
+        "year": 2021,
+        "type": "tài liệu chuyên khảo",
+        "tags": [
+            "di sản văn hóa",
+            "phi vật thể",
+            "phát triển bền vững",
+            "văn hóa Việt Nam"
+        ],
+        "file": "files/vanhoa/34299-VI.pdf",
+        "cover": "files/covers/012.jpg",
+        "license": "UNESCO Open Access"
+    },
+    {
+        "id": "053",
+        "category": "y-te-suc-khoe",
+        "audience": "Thanh thiếu nhi",
+        "format": "Tài liệu",
+        "title": "Tháp dinh dưỡng hợp lý cho trẻ em từ 12-14 tuổi",
+        "author": "Viện Dinh Dưỡng Quốc Gia",
+        "subject": "Y tế – Sức khỏe",
+        "year": 2025,
+        "type": "hướng dẫn dinh dưỡng",
+        "tags": [
+            "tháp dinh dưỡng",
+            "dinh dưỡng học đường",
+            "sức khỏe trẻ em",
+            "12-14 tuổi"
+        ],
+        "file": "files/yte/2025_vdd_thap_dinh_duong_cho_tre_1214_tuoi.pdf",
+        "cover": "files/covers/013.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "054",
+        "category": "y-te-suc-khoe",
+        "audience": "Người lớn",
+        "format": "Tài liệu",
+        "title": "Tài liệu truyền thông Phòng chống thiếu Vitamin D",
+        "author": "Viện Dinh Dưỡng Quốc Gia",
+        "subject": "Y tế – Sức khỏe",
+        "year": 2023,
+        "type": "tài liệu truyền thông",
+        "tags": [
+            "vitamin D",
+            "phòng chống vi chất",
+            "dinh dưỡng",
+            "y tế sức khỏe"
+        ],
+        "file": "files/yte/tr_21303_phong_chong_thieu_vitamin_d.pdf",
+        "cover": "files/covers/014.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "055",
+        "category": "tu-tuong-ho-chi-minh",
+        "audience": "Cán bộ - Đảng viên",
+        "format": "Tài liệu",
+        "title": "Tài liệu nghiên cứu phục vụ triển khai Chỉ thị 05-CT/TW (Khóa XII)",
+        "author": "Ban Tuyên giáo Trung ương",
+        "subject": "Tư tưởng Hồ Chí Minh",
+        "year": 2016,
+        "type": "tài liệu học tập lý luận",
+        "tags": [
+            "Hồ Chí Minh",
+            "Chỉ thị 05",
+            "Đảng Cộng sản",
+            "tư tưởng Hồ Chí Minh"
+        ],
+        "file": "files/tutuongHOCHIMINH/8e010f707c7466651dd9f6e01f36e88fTai_lieu_nghien_cuu_phuc_vu_trien_khai_CT05_khoa_XII.pdf",
+        "cover": "files/covers/010.jpg",
+        "license": "Lưu hành nội bộ & công khai"
+    },
+    {
+        "id": "056",
+        "category": "tu-tuong-ho-chi-minh",
+        "audience": "Người lớn",
+        "format": "Sách",
+        "title": "Tư tưởng Hồ Chí Minh và Con đường Cách mạng Việt Nam",
+        "author": "Đại tướng Võ Nguyên Giáp (Chủ biên)",
+        "subject": "Tư tưởng Hồ Chí Minh",
+        "year": 2000,
+        "type": "sách nghiên cứu lý luận",
+        "tags": [
+            "Tư tưởng Hồ Chí Minh",
+            "Võ Nguyên Giáp",
+            "cách mạng Việt Nam",
+            "lý luận chính trị"
+        ],
+        "file": "files/tutuongHOCHIMINH/50c52faee119fd5bea82a23afdcf49dbTu_tuong_HCM_va_con_duong_cach_mang_Vn.pdf",
+        "cover": "files/covers/011.jpg",
+        "license": "NXB Chính trị Quốc gia Sự thật"
+    },
+    {
+        "id": "057",
+        "category": "dia-ly-van-hoa",
+        "audience": "Đại chúng",
+        "format": "Tài liệu",
+        "title": "Trải nghiệm các hoạt động ngoài trời – Du lịch sinh thái",
+        "author": "Trung tâm Thông tin Du lịch (Tổng cục Du lịch)",
+        "subject": "Địa lý – Văn hóa – Dân tộc Việt Nam",
+        "year": 2022,
+        "type": "cẩm nang du lịch",
+        "tags": [
+            "du lịch sinh thái",
+            "hoạt động ngoài trời",
+            "văn hóa du lịch",
+            "Việt Nam"
+        ],
+        "file": "files/vanhoa/du_lich_sinh_thai.pdf",
+        "cover": "files/covers/012.jpg",
+        "license": "Tự do chia sẻ"
+    },
+    {
+        "id": "058",
+        "category": "dia-ly-van-hoa",
+        "audience": "Học sinh - Sinh viên",
+        "format": "Tài liệu",
+        "title": "Atlat Địa lý Việt Nam (Bản đồ & Giới thiệu)",
+        "author": "NXB Giáo Dục Việt Nam",
+        "subject": "Địa lý – Văn hóa – Dân tộc Việt Nam",
+        "year": 2021,
+        "type": "bản đồ địa lý",
+        "tags": [
+            "Atlat",
+            "địa lý Việt Nam",
+            "bản đồ",
+            "tài liệu học tập"
+        ],
+        "file": "files/vanhoa/atlat_dia_ly_viet_nam_attachintro_1654246924.pdf",
+        "cover": "files/covers/013.jpg",
+        "license": "Tài liệu học tập"
+    },
+    {
+        "id": "059",
+        "category": "ngoai-ngu",
+        "audience": "Người lớn",
+        "format": "Tài liệu",
+        "title": "Ha Long Bay – UNESCO World Heritage Nomination Documentation",
+        "author": "UNESCO World Heritage Centre",
+        "subject": "Ngoại ngữ",
+        "year": 1994,
+        "type": "hồ sơ di sản tiếng Anh",
+        "tags": [
+            "UNESCO",
+            "Ha Long Bay",
+            "World Heritage",
+            "tiếng Anh",
+            "ngoại ngữ"
+        ],
+        "file": "files/ngoaingu/672bis.pdf",
+        "cover": "files/covers/014.jpg",
+        "license": "UNESCO Public Domain"
+    },
+    {
+        "id": "060",
+        "category": "ngoai-ngu",
+        "audience": "Đại chúng",
+        "format": "Tài liệu",
+        "title": "A Beginner's Guide to Vietnam",
+        "author": "Vietnam Tourism Board",
+        "subject": "Ngoại ngữ",
+        "year": 2022,
+        "type": "cẩm nang tiếng Anh",
+        "tags": [
+            "tiếng Anh",
+            "Vietnam Guide",
+            "du lịch",
+            "ngoại ngữ",
+            "Beginner Guide"
+        ],
+        "file": "files/ngoaingu/Beginner's Guide to Vietnam.pdf",
+        "cover": "files/covers/015.jpg",
+        "license": "Tự do chia sẻ"
+    }
 ]
